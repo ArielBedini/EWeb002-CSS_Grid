@@ -1,0 +1,102 @@
+/* Recursos externos */
+@import url("normalize.css");
+
+/* Estilos Globales que podemos utilizar como variables en CSS*/
+:root {
+  --colorFondoPagina: #e7e7e7;
+  --colorFondoAside: #ffa600;
+  --colorFondoWidgets: #52a1cf;
+  --colorFondoHeaderFooter: #353535;
+  --colorBlanco: #ffff;
+  --colorNegro: #0000;
+  --fuentePrincipal: 'Roboto', sans-serif;
+}
+/* Configuración Global */
+
+/* apply a natural box layout model to all elements, but allowing components to change - Snippet de Paul Iris */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* configuración que permite igualar 1 rem = 10 pixels */
+  box-sizing: border-box; /* Snippet de Paul Irish */
+  /* Establecemos un scroll para toda la página */
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: var(--colorFondoPagina);
+  font-family: var(--fuentePrincipal);
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.contenedor {
+  width: 85%;
+  max-width: 100rem;
+  margin: 4rem auto; /* Espacio de 20px arriba y abajo y con 'auto' centra horizontal el contenedor */
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+}
+
+.contenedor .cabecera,
+.contenedor .contenido,
+.contenedor .barraLateral,
+.contenedor .widget_1,
+.contenedor .widget_2,
+.contenedor .footer {
+  background-color: var(--colorBlanco);
+  padding: 2rem;
+  border-radius: .25rem;
+}
+
+.contenedor .cabecera,
+.contenedor .footer {
+  background-color: var(--colorFondoHeaderFooter);
+  color: var(--colorBlanco);
+  grid-column: 1 / -1; /* Equivalente a:
+                          grid-column-start: 1;
+                          grid-column-end: -1; */
+}
+
+.contenedor .contenido {
+  grid-column: span 2;
+}
+
+.contenedor .contenido p {
+  margin: 0;
+  text-align: justify;
+}
+
+.contenedor .widget_1,
+.contenedor .widget_2 {
+  background-color: var(--colorFondoWidgets);
+  color: var(--colorBlanco);
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .barraLateral {
+  
+  background-color: var(--colorFondoAside);
+  grid-column: 3 / 4;
+  grid-row: span 2;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen {
+  
+}
