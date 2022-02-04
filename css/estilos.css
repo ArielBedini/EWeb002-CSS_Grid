@@ -86,8 +86,7 @@ p {
   justify-content: center;
 }
 
-.contenedor .barraLateral {
-  
+.contenedor .barraLateral { 
   background-color: var(--colorFondoAside);
   grid-column: 3 / 4;
   grid-row: span 2;
@@ -97,6 +96,14 @@ p {
   justify-content: center;
 }
 
-@media screen {
-  
+@media screen and (max-width: 768px) {
+  .contenedor .contenido {
+    grid-column: 1 / -1;  
+  }
+  .contenedor .barraLateral {
+  grid-column: 1 / -1;
+  }
+  .contenedor .widget_1 {
+    grid-column: span 2;
+  }
 }
