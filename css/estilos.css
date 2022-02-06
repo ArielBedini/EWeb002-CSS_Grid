@@ -43,7 +43,14 @@ p {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+
+  /* Definiendo areas en CSS Grid */
+  grid-template-areas: "cabecera cabecera cabecera"
+                       "contenido contenido barraLateral"
+                       "contenido contenido barraLateral"
+                       "widget_1 widget_2 barraLateral"
+                       "footer footer footer";
 
 }
 
@@ -58,17 +65,14 @@ p {
   border-radius: .25rem;
 }
 
-.contenedor .cabecera,
-.contenedor .footer {
+.contenedor .cabecera {
   background-color: var(--colorFondoHeaderFooter);
   color: var(--colorBlanco);
-  grid-column: 1 / -1; /* Equivalente a:
-                          grid-column-start: 1;
-                          grid-column-end: -1; */
+  grid-area: cabecera;
 }
 
 .contenedor .contenido {
-  grid-column: span 2;
+  grid-area: contenido;
 }
 
 .contenedor .contenido p {
@@ -86,24 +90,38 @@ p {
   justify-content: center;
 }
 
+.contenedor .widget_1 {
+  grid-area: widget_1;
+}
+.contenedor .widget_2 {
+  grid-area: widget_2;
+}
+
 .contenedor .barraLateral { 
   background-color: var(--colorFondoAside);
-  grid-column: 3 / 4;
-  grid-row: span 2;
+
+  min-height: 15rem;
   /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-area: barraLateral;
+}
+
+.contenedor .footer {
+  background-color: var(--colorFondoHeaderFooter);
+  color: var(--colorBlanco);
+  grid-area: footer;
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor .contenido {
-    grid-column: 1 / -1;  
-  }
-  .contenedor .barraLateral {
-  grid-column: 1 / -1;
-  }
-  .contenedor .widget_1 {
-    grid-column: span 2;
+  /* Reestructurando nuestro contenedor para hacerlo responsive */
+  .contenedor {
+    /* Definiendo areas en CSS Grid */
+    grid-template-areas: "cabecera cabecera cabecera"
+                        "contenido contenido contenido"
+                        "barraLateral barraLateral barraLateral"
+                        "widget_1 widget_1 widget_2"
+                        "footer footer footer";
   }
 }
