@@ -90,10 +90,14 @@ p {
   background-color: var(--colorFondoAside);
   grid-column: 3 / 4;
   grid-row: span 2;
-  /* text-align: center; */
+
+  /* centrar contenido vertizal y horizontalmente
+  display: grid; 
+  align-items: center;
+  justify-items: center; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 @media screen and (max-width: 768px) {
