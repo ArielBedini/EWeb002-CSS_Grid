@@ -99,6 +99,7 @@ p {
 
 .contenedor .barraLateral { 
   background-color: var(--colorFondoAside);
+<<<<<<< HEAD
 
   min-height: 15rem;
   /* text-align: center; */
@@ -112,6 +113,18 @@ p {
   background-color: var(--colorFondoHeaderFooter);
   color: var(--colorBlanco);
   grid-area: footer;
+=======
+  grid-column: 3 / 4;
+  grid-row: span 2;
+
+  /* centrar contenido vertizal y horizontalmente
+  display: grid; 
+  align-items: center;
+  justify-items: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+>>>>>>> 71579e4 (estilos.css modificamos display y propiedades para centrar contenido)
 }
 
 @media screen and (max-width: 768px) {
