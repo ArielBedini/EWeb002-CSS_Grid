@@ -99,28 +99,8 @@ p {
 
 .contenedor .barraLateral { 
   background-color: var(--colorFondoAside);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   min-height: 15rem;
-  /* text-align: center; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: barraLateral;
-}
-
-.contenedor .footer {
-  background-color: var(--colorFondoHeaderFooter);
-  color: var(--colorBlanco);
-  grid-area: footer;
-=======
-  grid-column: 3 / 4;
-  grid-row: span 2;
-=======
-  grid-area: barraLateral;
->>>>>>> 4886dfd (Rebase de la rama main y modificamos display y propiedades para centrar contenido en estilos.css)
-
+    grid-area: barraLateral;
   /* centrar contenido vertizal y horizontalmente
   display: grid; 
   align-items: center;
@@ -128,17 +108,19 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;*/
-<<<<<<< HEAD
->>>>>>> 71579e4 (estilos.css modificamos display y propiedades para centrar contenido)
-=======
-  
 }
 
 .contenedor .footer {
   background-color: var(--colorFondoHeaderFooter);
   color: var(--colorBlanco);
   grid-area: footer;
->>>>>>> 4886dfd (Rebase de la rama main y modificamos display y propiedades para centrar contenido en estilos.css)
+ 
+}
+
+.contenedor .footer {
+  background-color: var(--colorFondoHeaderFooter);
+  color: var(--colorBlanco);
+  grid-area: footer;
 }
 
 @media screen and (max-width: 768px) {
